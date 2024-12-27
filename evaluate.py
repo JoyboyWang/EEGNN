@@ -156,7 +156,7 @@ class Evaluator:
         max_local_entity = valid_data.max_local_entity
         ignore_prob = (1 - eps) / max_local_entity
         for iteration in tqdm(range(num_epoch)):
-            batch = valid_data.get_batch(iteration, test_batch_size, fact_dropout=0.0, test=True)
+            batch = valid_data.get_batch(iteration, test_batch_size, fact_dropout=0.5, test=True)
 	    
             #ipdb.set_trace()
             with torch.no_grad():

@@ -264,13 +264,13 @@ class ReaRev(BaseModel):
         #print(P.shape) #[20, 2000, 2000]
         #print(P.size())
 
-        #Score = torch.zeros(20, 2000,2000)
-        #for i, (head,rel,tail, bid) in enumerate(zip(kb_adj_mat[0],kb_adj_mat[1],kb_adj_mat[2],kb_adj_mat[3])):
-        #    Score[bid][head - bid * 2000][tail - bid * 2000] = 1
-        #Sim = self.compute_distance(batch_size)
-        #P = torch.bmm(Sim, Score.transpose(1,2)) * (1 - Score)
-        #threshold = 0.3
-        #kb_adj_mat = self._build_fact_mat(kb_adj_mat, P, threshold)
+        Score = torch.zeros(20, 2000,2000)
+        for i, (head,rel,tail, bid) in enumerate(zip(kb_adj_mat[0],kb_adj_mat[1],kb_adj_mat[2],kb_adj_mat[3])):
+            Score[bid][head - bid * 2000][tail - bid * 2000] = 1
+        Sim = self.compute_distance(batch_size)
+        P = torch.bmm(Sim, Score.transpose(1,2)) * (1 - Score)
+        threshold = 0.9
+        kb_adj_mat = self._build_fact_mat(kb_adj_mat, P, threshold)
         #self.local_entity_emb = self.get_ent_init(local_entity, kb_adj_mat, rel_features)
 
         #ipdb.set_trace()

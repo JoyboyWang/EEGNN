@@ -3,7 +3,7 @@
 This is a repo that reproduce the result of E-ReaRev
 
 ## Run
-Before you run the code, you must download the data from 
+Before you run the code, you must download the data from https://drive.google.com/file/d/1p7eLSsSKkZQxB32mT5lMsthVP6R_3x1j/view
 and unzip to this folder
 
 And make sure you have the requirement need in requirement.txt
