@@ -1,6 +1,10 @@
 # EEGNN
 
-This is a repo that reproduce the result of E-ReaRev
+This is a repo for phase 2 of the project, Advanced Topics in Database Systems (CSCI5120). Group members are as follows:
+- Yinqiao Wang
+- Jiahao Ge
+- Ziheng Fang
+- Sirapat Charukamnertkanok
 
 ## Run
 Before you run the code, you must download the data from https://drive.google.com/drive/folders/1ifgVHQDnvFEunP9hmVYT07Y3rvcpIfQp?usp=sharing
